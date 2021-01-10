@@ -1,0 +1,4 @@
+services:
+  example_module.data:
+    class: Drupal\example_module\ExampleModuleData
+    arguments: ['@config.factory']

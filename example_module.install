@@ -1,0 +1,43 @@
+<?php
+
+  /**
+   * Implements hook_schema().
+   */
+  function example_module_schema() {
+    $schema = [];
+    $schema['example_users'] = [
+      'description' => 'The table that holds user data.',
+      'fields' => [
+        'id' => [
+          'description' => 'User identifier.',
+          'type' => 'serial',
+          'unsigned' => TRUE,
+          'not null' => TRUE,
+        ],
+        'name' => [
+          'description' => 'User name.',
+          'type' => 'varchar',
+          'length' => 255,
+          'not null' => TRUE,
+        ],
+        'birthdate' => [
+          'description' => 'User birthdate.',
+          'type' => 'varchar',
+          'not null' => TRUE,
+          'length' => 255,
+        ],
+        'role' => [
+          'description' => 'User Role.',
+          'type' => 'int',
+          'not null' => TRUE,
+        ],
+        'status' => array(
+          'description' => 'User status.',
+          'type' => 'int',
+          'not null' => TRUE,
+        ),
+      ],
+      'primary key' => ['id'],
+    ];
+    return $schema;
+  }

@@ -1,0 +1,5 @@
+name: Example module
+description: Example module
+type: module
+core: 8.x
+package: Custom

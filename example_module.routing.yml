@@ -1,0 +1,15 @@
+example_module.usercreationform:
+  path: '/example-module/form'
+  defaults:
+    _controller: 'Drupal\example_module\Controller\UserCreationController::addUser'
+    _title: 'User Creation'
+  requirements:
+    _permission: 'access content'
+example_module.userexportdata:
+  path: '/example-module/data'
+  defaults:
+    _controller: 'Drupal\example_module\Controller\UserCreationController::getData'
+  methods: [GET]
+  requirements:
+    _access: 'TRUE'
+    _permission: 'access content'
