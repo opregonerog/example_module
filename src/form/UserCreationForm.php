@@ -101,7 +101,7 @@ class UserCreationForm extends ConfigFormBase {
     $id = $form_state->getValue('identification');
     $birthdate = $form_state->getValue('birthdate');
     $role = $form_state->getValue('role');
-    $status = $role == 3 ? 1 : 0;
+    $status = $role == 1 ? 1 : 0;
     $this->data->createUser($name, $id, $birthdate, $role, $status);
     drupal_set_message(t('User registered'));
   }
